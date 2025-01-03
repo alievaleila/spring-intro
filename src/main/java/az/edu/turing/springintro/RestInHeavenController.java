@@ -18,14 +18,15 @@ public class RestInHeavenController {
     }
 
     @GetMapping("{id}")
-    public String getUsersById(@PathVariable int id){
+    public String getUsersById(@PathVariable int id) {
         return "Hello  World +" + id;
     }
 
-    @GetMapping(value="/aaaa",produces="application/json")
-    public ResponseEntity<User> getUsersbyA(){
+    @GetMapping(value = "/aaaa", produces = "application/json")
+    public ResponseEntity<User> getUsersbyA() {
         return ResponseEntity.ok(new User("Do"));
     }
+
     public static class User implements Serializable {
         String name;
 
